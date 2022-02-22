@@ -35,7 +35,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""MainAttack"",
+                    ""name"": ""AttackPrimary"",
                     ""type"": ""Button"",
                     ""id"": ""ed5f0407-471a-4c70-b4b8-639fdc012751"",
                     ""expectedControlType"": ""Button"",
@@ -43,7 +43,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""SecondaryAttack"",
+                    ""name"": ""AttackSecondary"",
                     ""type"": ""Button"",
                     ""id"": ""25de134d-be03-47df-9623-18f4dab9ae01"",
                     ""expectedControlType"": ""Button"",
@@ -226,7 +226,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MainAttack"",
+                    ""action"": ""AttackPrimary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -237,7 +237,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MainAttack"",
+                    ""action"": ""AttackPrimary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -248,7 +248,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""SecondaryAttack"",
+                    ""action"": ""AttackSecondary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -259,7 +259,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""SecondaryAttack"",
+                    ""action"": ""AttackSecondary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -338,8 +338,8 @@ public class @GameInput : IInputActionCollection, IDisposable
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         m_Gameplay_RotateCamera = m_Gameplay.FindAction("RotateCamera", throwIfNotFound: true);
-        m_Gameplay_MainAttack = m_Gameplay.FindAction("MainAttack", throwIfNotFound: true);
-        m_Gameplay_SecondaryAttack = m_Gameplay.FindAction("SecondaryAttack", throwIfNotFound: true);
+        m_Gameplay_AttackPrimary = m_Gameplay.FindAction("AttackPrimary", throwIfNotFound: true);
+        m_Gameplay_AttackSecondary = m_Gameplay.FindAction("AttackSecondary", throwIfNotFound: true);
         m_Gameplay_Boost = m_Gameplay.FindAction("Boost", throwIfNotFound: true);
         m_Gameplay_Break = m_Gameplay.FindAction("Break", throwIfNotFound: true);
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
@@ -394,8 +394,8 @@ public class @GameInput : IInputActionCollection, IDisposable
     private IGameplayActions m_GameplayActionsCallbackInterface;
     private readonly InputAction m_Gameplay_Move;
     private readonly InputAction m_Gameplay_RotateCamera;
-    private readonly InputAction m_Gameplay_MainAttack;
-    private readonly InputAction m_Gameplay_SecondaryAttack;
+    private readonly InputAction m_Gameplay_AttackPrimary;
+    private readonly InputAction m_Gameplay_AttackSecondary;
     private readonly InputAction m_Gameplay_Boost;
     private readonly InputAction m_Gameplay_Break;
     private readonly InputAction m_Gameplay_Pause;
@@ -405,8 +405,8 @@ public class @GameInput : IInputActionCollection, IDisposable
         public GameplayActions(@GameInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputAction @RotateCamera => m_Wrapper.m_Gameplay_RotateCamera;
-        public InputAction @MainAttack => m_Wrapper.m_Gameplay_MainAttack;
-        public InputAction @SecondaryAttack => m_Wrapper.m_Gameplay_SecondaryAttack;
+        public InputAction @AttackPrimary => m_Wrapper.m_Gameplay_AttackPrimary;
+        public InputAction @AttackSecondary => m_Wrapper.m_Gameplay_AttackSecondary;
         public InputAction @Boost => m_Wrapper.m_Gameplay_Boost;
         public InputAction @Break => m_Wrapper.m_Gameplay_Break;
         public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
@@ -425,12 +425,12 @@ public class @GameInput : IInputActionCollection, IDisposable
                 @RotateCamera.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotateCamera;
                 @RotateCamera.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotateCamera;
                 @RotateCamera.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotateCamera;
-                @MainAttack.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMainAttack;
-                @MainAttack.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMainAttack;
-                @MainAttack.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMainAttack;
-                @SecondaryAttack.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSecondaryAttack;
-                @SecondaryAttack.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSecondaryAttack;
-                @SecondaryAttack.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSecondaryAttack;
+                @AttackPrimary.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAttackPrimary;
+                @AttackPrimary.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAttackPrimary;
+                @AttackPrimary.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAttackPrimary;
+                @AttackSecondary.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAttackSecondary;
+                @AttackSecondary.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAttackSecondary;
+                @AttackSecondary.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAttackSecondary;
                 @Boost.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBoost;
                 @Boost.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBoost;
                 @Boost.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBoost;
@@ -450,12 +450,12 @@ public class @GameInput : IInputActionCollection, IDisposable
                 @RotateCamera.started += instance.OnRotateCamera;
                 @RotateCamera.performed += instance.OnRotateCamera;
                 @RotateCamera.canceled += instance.OnRotateCamera;
-                @MainAttack.started += instance.OnMainAttack;
-                @MainAttack.performed += instance.OnMainAttack;
-                @MainAttack.canceled += instance.OnMainAttack;
-                @SecondaryAttack.started += instance.OnSecondaryAttack;
-                @SecondaryAttack.performed += instance.OnSecondaryAttack;
-                @SecondaryAttack.canceled += instance.OnSecondaryAttack;
+                @AttackPrimary.started += instance.OnAttackPrimary;
+                @AttackPrimary.performed += instance.OnAttackPrimary;
+                @AttackPrimary.canceled += instance.OnAttackPrimary;
+                @AttackSecondary.started += instance.OnAttackSecondary;
+                @AttackSecondary.performed += instance.OnAttackSecondary;
+                @AttackSecondary.canceled += instance.OnAttackSecondary;
                 @Boost.started += instance.OnBoost;
                 @Boost.performed += instance.OnBoost;
                 @Boost.canceled += instance.OnBoost;
@@ -473,8 +473,8 @@ public class @GameInput : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnRotateCamera(InputAction.CallbackContext context);
-        void OnMainAttack(InputAction.CallbackContext context);
-        void OnSecondaryAttack(InputAction.CallbackContext context);
+        void OnAttackPrimary(InputAction.CallbackContext context);
+        void OnAttackSecondary(InputAction.CallbackContext context);
         void OnBoost(InputAction.CallbackContext context);
         void OnBreak(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);

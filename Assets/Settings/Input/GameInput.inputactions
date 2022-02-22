@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "MainAttack",
+                    "name": "AttackPrimary",
                     "type": "Button",
                     "id": "ed5f0407-471a-4c70-b4b8-639fdc012751",
                     "expectedControlType": "Button",
@@ -30,7 +30,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SecondaryAttack",
+                    "name": "AttackSecondary",
                     "type": "Button",
                     "id": "25de134d-be03-47df-9623-18f4dab9ae01",
                     "expectedControlType": "Button",
@@ -213,7 +213,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MainAttack",
+                    "action": "AttackPrimary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -224,7 +224,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MainAttack",
+                    "action": "AttackPrimary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -235,7 +235,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SecondaryAttack",
+                    "action": "AttackSecondary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -246,7 +246,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SecondaryAttack",
+                    "action": "AttackSecondary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

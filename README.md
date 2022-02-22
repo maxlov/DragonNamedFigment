@@ -1,6 +1,6 @@
 # A Dragon Named Figment
 
-[Original sketch](maxlov.github.com/DragonNamedFigment/Images/idea_sketch.jpg)
+![Original sketch](Images/idea_sketch.jpg)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/maxlov/DragonNamedFigment)
 ![Twitter Follow](https://img.shields.io/twitter/follow/maxwell_lovell?style=social)

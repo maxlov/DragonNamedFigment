@@ -14,7 +14,9 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
     public event UnityAction attackPrimaryEvent = delegate { };
     public event UnityAction attackSecondaryEvent = delegate { };
     public event UnityAction boostEvent = delegate { };
-    public event UnityAction breakEvent = delegate { };
+    public event UnityAction boostCancelledEvent = delegate { };
+    public event UnityAction brakeEvent = delegate { };
+    public event UnityAction brakeCancelledEvent = delegate { };
     public event UnityAction pauseEvent = delegate { };
 
     private GameInput _gameInput;
@@ -26,6 +28,7 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
             _gameInput = new GameInput();
 
             _gameInput.Gameplay.SetCallbacks(this);
+            _gameInput.Gameplay.Enable();
         }
     }
 
@@ -66,16 +69,28 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
 
     public void OnBoost(InputAction.CallbackContext context)
     {
-        if (!context.performed) { return; }
-
-        boostEvent.Invoke();
+        switch (context.phase)
+        {
+            case InputActionPhase.Performed:
+                boostEvent.Invoke();
+                break;
+            case InputActionPhase.Canceled:
+                boostCancelledEvent.Invoke();
+                break;
+        }
     }
 
-    public void OnBreak(InputAction.CallbackContext context)
+    public void OnBrake(InputAction.CallbackContext context)
     {
-        if (!context.performed) { return; }
-
-        breakEvent.Invoke();
+        switch (context.phase)
+        {
+            case InputActionPhase.Performed:
+                brakeEvent.Invoke();
+                break;
+            case InputActionPhase.Canceled:
+                brakeCancelledEvent.Invoke();
+                break;
+        }
     }
 
     public void OnPause(InputAction.CallbackContext context)

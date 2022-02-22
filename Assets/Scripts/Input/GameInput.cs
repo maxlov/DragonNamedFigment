@@ -23,7 +23,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""cb3e0cef-cb64-4e34-9455-909c85297f36"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone"",
                     ""interactions"": """"
                 },
                 {
@@ -31,7 +31,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""a068c1bd-0c27-4afe-adb7-b1ff2ad65925"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone"",
                     ""interactions"": """"
                 },
                 {
@@ -59,7 +59,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Break"",
+                    ""name"": ""Brake"",
                     ""type"": ""Button"",
                     ""id"": ""fc84824c-fb57-4e90-8fa3-6fd30d438f39"",
                     ""expectedControlType"": ""Button"",
@@ -213,7 +213,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""id"": ""9145c3e4-0129-48d2-a139-e90ba7526c68"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=2,y=2)"",
+                    ""processors"": ""ScaleVector2(x=2,y=2),StickDeadzone(min=0.25)"",
                     ""groups"": """",
                     ""action"": ""RotateCamera"",
                     ""isComposite"": false,
@@ -292,7 +292,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Break"",
+                    ""action"": ""Brake"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -303,7 +303,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Break"",
+                    ""action"": ""Brake"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -341,7 +341,7 @@ public class @GameInput : IInputActionCollection, IDisposable
         m_Gameplay_AttackPrimary = m_Gameplay.FindAction("AttackPrimary", throwIfNotFound: true);
         m_Gameplay_AttackSecondary = m_Gameplay.FindAction("AttackSecondary", throwIfNotFound: true);
         m_Gameplay_Boost = m_Gameplay.FindAction("Boost", throwIfNotFound: true);
-        m_Gameplay_Break = m_Gameplay.FindAction("Break", throwIfNotFound: true);
+        m_Gameplay_Brake = m_Gameplay.FindAction("Brake", throwIfNotFound: true);
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
     }
 
@@ -397,7 +397,7 @@ public class @GameInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_AttackPrimary;
     private readonly InputAction m_Gameplay_AttackSecondary;
     private readonly InputAction m_Gameplay_Boost;
-    private readonly InputAction m_Gameplay_Break;
+    private readonly InputAction m_Gameplay_Brake;
     private readonly InputAction m_Gameplay_Pause;
     public struct GameplayActions
     {
@@ -408,7 +408,7 @@ public class @GameInput : IInputActionCollection, IDisposable
         public InputAction @AttackPrimary => m_Wrapper.m_Gameplay_AttackPrimary;
         public InputAction @AttackSecondary => m_Wrapper.m_Gameplay_AttackSecondary;
         public InputAction @Boost => m_Wrapper.m_Gameplay_Boost;
-        public InputAction @Break => m_Wrapper.m_Gameplay_Break;
+        public InputAction @Brake => m_Wrapper.m_Gameplay_Brake;
         public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
@@ -434,9 +434,9 @@ public class @GameInput : IInputActionCollection, IDisposable
                 @Boost.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBoost;
                 @Boost.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBoost;
                 @Boost.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBoost;
-                @Break.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBreak;
-                @Break.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBreak;
-                @Break.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBreak;
+                @Brake.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBrake;
+                @Brake.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBrake;
+                @Brake.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBrake;
                 @Pause.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
@@ -459,9 +459,9 @@ public class @GameInput : IInputActionCollection, IDisposable
                 @Boost.started += instance.OnBoost;
                 @Boost.performed += instance.OnBoost;
                 @Boost.canceled += instance.OnBoost;
-                @Break.started += instance.OnBreak;
-                @Break.performed += instance.OnBreak;
-                @Break.canceled += instance.OnBreak;
+                @Brake.started += instance.OnBrake;
+                @Brake.performed += instance.OnBrake;
+                @Brake.canceled += instance.OnBrake;
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
@@ -476,7 +476,7 @@ public class @GameInput : IInputActionCollection, IDisposable
         void OnAttackPrimary(InputAction.CallbackContext context);
         void OnAttackSecondary(InputAction.CallbackContext context);
         void OnBoost(InputAction.CallbackContext context);
-        void OnBreak(InputAction.CallbackContext context);
+        void OnBrake(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
     }
 }

@@ -10,7 +10,7 @@
                     "type": "Value",
                     "id": "cb3e0cef-cb64-4e34-9455-909c85297f36",
                     "expectedControlType": "Vector2",
-                    "processors": "",
+                    "processors": "StickDeadzone",
                     "interactions": ""
                 },
                 {
@@ -18,7 +18,7 @@
                     "type": "Value",
                     "id": "a068c1bd-0c27-4afe-adb7-b1ff2ad65925",
                     "expectedControlType": "Vector2",
-                    "processors": "",
+                    "processors": "StickDeadzone",
                     "interactions": ""
                 },
                 {
@@ -46,7 +46,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Break",
+                    "name": "Brake",
                     "type": "Button",
                     "id": "fc84824c-fb57-4e90-8fa3-6fd30d438f39",
                     "expectedControlType": "Button",
@@ -200,7 +200,7 @@
                     "id": "9145c3e4-0129-48d2-a139-e90ba7526c68",
                     "path": "<Mouse>/delta",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=2,y=2)",
+                    "processors": "ScaleVector2(x=2,y=2),StickDeadzone(min=0.25)",
                     "groups": "",
                     "action": "RotateCamera",
                     "isComposite": false,
@@ -279,7 +279,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Break",
+                    "action": "Brake",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -290,7 +290,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Break",
+                    "action": "Brake",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

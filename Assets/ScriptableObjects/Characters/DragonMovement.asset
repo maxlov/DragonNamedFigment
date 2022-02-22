@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6f9492f3288f74c8475adb5bdc7596, type: 3}
+  m_Name: DragonMovement
+  m_EditorClassIdentifier: 
+  _speed: 1000
+  _speedMultiplier: 1
+  _baseSpeedMultiplier: 1
+  _boostMultiplier: 3
+  _brakeMultiplier: 0.2
+  _torque: 1

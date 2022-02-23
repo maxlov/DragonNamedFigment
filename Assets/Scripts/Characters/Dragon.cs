@@ -10,7 +10,12 @@ public class Dragon : MonoBehaviour
     private Rigidbody dragonRigidBody;
     private Transform dragonModel;
 
+    [SerializeField] private Transform aimTarget;
+
     private Vector2 rotateVector = Vector2.zero;
+    private Vector2 moveVector = Vector2.zero;
+
+    #region Input Setup
 
     private void OnEnable()
     {
@@ -32,6 +37,8 @@ public class Dragon : MonoBehaviour
         _inputReader.brakeCancelledEvent -= OnBrakeCancelled;
     }
 
+    #endregion
+
     private void Start()
     {
         dragonRigidBody = gameObject.GetComponent<Rigidbody>();
@@ -41,6 +48,7 @@ public class Dragon : MonoBehaviour
     private void Update()
     {
         MoveForwardDragon();
+        MoveHorizontalDragon();
         TurnDragon();
     }
 
@@ -49,20 +57,27 @@ public class Dragon : MonoBehaviour
         dragonRigidBody.velocity = _dragonMoveData.Speed * _dragonMoveData.SpeedMultiplier * Time.deltaTime * transform.forward;
     }
 
+    private void MoveHorizontalDragon()
+    {
+        transform.position += 2 * Time.deltaTime * new Vector3(moveVector.x, moveVector.y);
+    }
+
     private void TurnDragon()
     {
-        dragonRigidBody.AddRelativeTorque(_dragonMoveData.Torque * rotateVector.y, _dragonMoveData.Torque * rotateVector.x, 0);
+        dragonRigidBody.AddRelativeTorque(_dragonMoveData.YTorque * rotateVector.y, _dragonMoveData.XTorque * rotateVector.x, 0);
     }
 
     private void OnMove(Vector2 movement)
     {
-
+        moveVector = movement;
     }
 
     private void OnRotateCamera(Vector2 lookVector)
     {
         rotateVector = lookVector;
     }
+
+    #region Speed Modifiers
 
     private void OnBoost()
     {
@@ -83,4 +98,6 @@ public class Dragon : MonoBehaviour
     {
         _dragonMoveData.SetSpeedMultiplier(_dragonMoveData.BaseSpeedMultiplier);
     }
+
+    #endregion
 }

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: DragonMovement
   m_EditorClassIdentifier: 
   _speed: 1000
-  _speedMultiplier: 1
-  _baseSpeedMultiplier: 1
-  _boostMultiplier: 3
+  _speedMultiplier: 2
+  _baseSpeedMultiplier: 2
+  _boostMultiplier: 4
   _brakeMultiplier: 0.2
-  _torque: 1
+  _xTorque: 5
+  _yTorque: 1

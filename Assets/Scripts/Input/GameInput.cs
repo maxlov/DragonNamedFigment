@@ -213,7 +213,7 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""id"": ""9145c3e4-0129-48d2-a139-e90ba7526c68"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=2,y=2),StickDeadzone(min=0.25)"",
+                    ""processors"": ""ScaleVector2(x=0.5,y=0.5)"",
                     ""groups"": """",
                     ""action"": ""RotateCamera"",
                     ""isComposite"": false,

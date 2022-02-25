@@ -14,3 +14,13 @@ Inspired by the SNES Starfox!
 
 I focused on getting the MVP done, ensuring the game was easily expandible with clean code architecture, and after that I am planning on using the other half of my time polishing visuals!
 We will see how far I get on that :)
+
+
+Attributions:
+Audio
+"UI Confirmation Alert, A3.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org
+
+"Last Push" by Jay Man - OurMusicBox
+"Wrath Of Sin" by Jay Man - OurMusicBox
+https://www.our-music-box.com/
+https://www.youtube.com/c/ourmusicbox/ 

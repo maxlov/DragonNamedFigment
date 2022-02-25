@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2051380728}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Camera Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051380727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4857742084554326114}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3692621025157212854}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Models
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4857742083551249509}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4857742083587458676}
   - component: {fileID: 4857742083587458673}
   - component: {fileID: 4857742083587458678}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4857742083658777532}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HornsLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 4857742084119495459}
   - component: {fileID: 4857742084119495456}
   - component: {fileID: 4857742084119495457}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 4857742084284980634}
   - component: {fileID: 4857742084284980635}
   - component: {fileID: 4857742084284980629}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TailEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,15 +491,15 @@ TrailRenderer:
       key1: {r: 1, g: 0.3879471, b: 0, a: 1}
       key2: {r: 1, g: 0, b: 0.1860466, a: 0}
       key3: {r: 1, g: 0, b: 0.403471, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 1, g: 0, b: 0.75444126, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 11758
-      ctime1: 21781
-      ctime2: 35659
-      ctime3: 55127
-      ctime4: 0
+      ctime0: 3277
+      ctime1: 12914
+      ctime2: 31033
+      ctime3: 49537
+      ctime4: 65535
       ctime5: 0
       ctime6: 0
       ctime7: 0
@@ -512,7 +512,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 4
+      m_NumColorKeys: 5
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
@@ -532,7 +532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4857742084488808265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HornsRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 4857742084554326141}
   - component: {fileID: 4857742084554326143}
   - component: {fileID: 838249623669485381}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dragon
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -601,7 +601,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 5
+  m_AngularDrag: 6
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 4857742084569840804}
   - component: {fileID: 4857742084569840805}
   - component: {fileID: 4857742084569840810}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 4857742084674004336}
   - component: {fileID: 4857742084674004237}
   - component: {fileID: 4857742084674004338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +838,7 @@ GameObject:
   - component: {fileID: 4857742084920674409}
   - component: {fileID: 4857742084920674410}
   - component: {fileID: 4857742084920674411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MouthLower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -919,7 +919,7 @@ GameObject:
   - component: {fileID: 4857742085010689934}
   - component: {fileID: 4857742085010689931}
   - component: {fileID: 4857742085010689928}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MouthUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 4857742085059163645}
   - component: {fileID: 4857742085059163618}
   - component: {fileID: 4857742085059163619}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1096,7 +1096,7 @@ GameObject:
   - component: {fileID: 4857742085289664431}
   - component: {fileID: 4857742085289664428}
   - component: {fileID: 4857742085289664429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DragonPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,7 +1110,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4857742085289664402}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.043619405, z: 0, w: 0.9990483}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1118,7 +1118,7 @@ Transform:
   - {fileID: 3692621025157212854}
   m_Father: {fileID: 4857742084554326114}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 5, z: 0}
 --- !u!33 &4857742085289664431
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1236,6 +1236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MaterialEviscerator
       objectReference: {fileID: 0}
+    - target: {fileID: 4236562980426894634, guid: 2398f575361d3a94abced60c1994a9f1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7738025458640322163, guid: 2398f575361d3a94abced60c1994a9f1, type: 3}
       propertyPath: OnShootEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1264,9 +1268,33 @@ PrefabInstance:
       propertyPath: OnShootEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8392593218973620593, guid: 2398f575361d3a94abced60c1994a9f1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392593219464831932, guid: 2398f575361d3a94abced60c1994a9f1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8392593219464831932, guid: 2398f575361d3a94abced60c1994a9f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.51
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392593219464831933, guid: 2398f575361d3a94abced60c1994a9f1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392593219900617059, guid: 2398f575361d3a94abced60c1994a9f1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392593220432280969, guid: 2398f575361d3a94abced60c1994a9f1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8392593220432280969, guid: 2398f575361d3a94abced60c1994a9f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2398f575361d3a94abced60c1994a9f1, type: 3}

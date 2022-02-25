@@ -13,14 +13,13 @@ public class FlickerGameObject : MonoBehaviour
 
     public void Flicker()
     {
-        Debug.Log("flickering");
-        flickerObject.SetActive(true);
-        StartCoroutine(WaitCoroutine());
-        flickerObject.SetActive(false);
+        StartCoroutine(FlashCoroutine());
     }
 
-    IEnumerator WaitCoroutine()
+    IEnumerator FlashCoroutine()
     {
-        yield return new WaitForSeconds(0.1f);
+        flickerObject.SetActive(true);
+        yield return new WaitForSeconds(0.2f);
+        flickerObject.SetActive(false);
     }
 }

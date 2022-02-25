@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponFireMode: 0
   projectilePrefab: {fileID: 8696376227705079622, guid: 185c06af927327348b8beb578c52c96c, type: 3}
-  projectileVelocity: 400
+  projectileVelocity: 600
   weaponScreenShake: 1
   numProjectilesToFire: 1
   damage: 1

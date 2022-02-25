@@ -64,7 +64,7 @@ public class Dragon : MonoBehaviour
 
     private void TurnDragon()
     {
-        dragonRigidBody.AddRelativeTorque(_dragonMoveData.YTorque * rotateVector.y, _dragonMoveData.XTorque * rotateVector.x, 0);
+        dragonRigidBody.AddRelativeTorque(_dragonMoveData.YTorque * rotateVector.y * Time.deltaTime, _dragonMoveData.XTorque * rotateVector.x * Time.deltaTime, 0);
     }
 
     private void OnMove(Vector2 movement)

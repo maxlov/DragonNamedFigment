@@ -17,5 +17,5 @@ MonoBehaviour:
   _baseSpeedMultiplier: 2
   _boostMultiplier: 4
   _brakeMultiplier: 0.2
-  _xTorque: 5
-  _yTorque: 1
+  _xTorque: 800
+  _yTorque: 400

@@ -12,7 +12,9 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
     public event UnityAction<Vector2> moveEvent = delegate { };
     public event UnityAction<Vector2> rotateCameraEvent = delegate { };
     public event UnityAction attackPrimaryEvent = delegate { };
+    public event UnityAction attackPrimaryCancelledEvent  = delegate { };
     public event UnityAction attackSecondaryEvent = delegate { };
+    public event UnityAction attackSecondaryCancelledEvent = delegate { };
     public event UnityAction boostEvent = delegate { };
     public event UnityAction boostCancelledEvent = delegate { };
     public event UnityAction brakeEvent = delegate { };
@@ -55,16 +57,28 @@ public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
 
     public void OnAttackPrimary(InputAction.CallbackContext context)
     {
-        if (!context.performed) { return; }
-
-        attackPrimaryEvent.Invoke();
+        switch (context.phase)
+        {
+            case InputActionPhase.Performed:
+                attackPrimaryEvent.Invoke();
+                break;
+            case InputActionPhase.Canceled:
+                attackPrimaryCancelledEvent.Invoke();
+                break;
+        }
     }
 
     public void OnAttackSecondary(InputAction.CallbackContext context)
     {
-        if (!context.performed) { return; }
-
-        attackPrimaryEvent.Invoke();
+        switch (context.phase)
+        {
+            case InputActionPhase.Performed:
+                attackSecondaryEvent.Invoke();
+                break;
+            case InputActionPhase.Canceled:
+                attackSecondaryCancelledEvent.Invoke();
+                break;
+        }
     }
 
     public void OnBoost(InputAction.CallbackContext context)

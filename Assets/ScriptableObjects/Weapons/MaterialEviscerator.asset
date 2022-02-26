@@ -18,5 +18,5 @@ MonoBehaviour:
   weaponScreenShake: 1
   numProjectilesToFire: 1
   damage: 1
-  lifeTime: 10
+  lifeTime: 4
   fireRate: 0.2

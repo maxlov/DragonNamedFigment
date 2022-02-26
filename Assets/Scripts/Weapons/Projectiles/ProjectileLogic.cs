@@ -29,6 +29,8 @@ public class ProjectileLogic : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(gameObject.name + " dealt " + damage + " to " + collision.gameObject.name);
+        if (collision.gameObject.TryGetComponent<Damageable>(out Damageable damagable))
+            damagable.ReceiveAnAttack(damage);
         Destroy(gameObject);
     }
 }

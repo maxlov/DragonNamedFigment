@@ -7,6 +7,10 @@ public class Damageable : MonoBehaviour
     [SerializeField] private HealthConfigSO _healthConfigSO;
     [SerializeField] private HealthSO _currentHealthSO;
 
+	[Header("Score")]
+	[Tooltip("Optional, adds score based on max health.")]
+	[SerializeField] private ScoreSO _scoreData;
+
     public UnityEvent OnDie = new UnityEvent();
 
 	private void Awake()
@@ -29,6 +33,8 @@ public class Damageable : MonoBehaviour
 		{
 			if (OnDie != null)
 				OnDie.Invoke();
+			if (_scoreData != null)
+				_scoreData.AddScore(_healthConfigSO.InitialHealth);
 			_currentHealthSO.SetCurrentHealth(_healthConfigSO.InitialHealth);
 			Destroy(gameObject, .1f);
 		}

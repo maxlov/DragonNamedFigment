@@ -109,7 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthConfigSO: {fileID: 11400000, guid: 494e82e0cdb130c44a3a5933db7737c6, type: 2}
-  _currentHealthSO: {fileID: 11400000, guid: 6fb27c0ae36ef3a48844fc6e24002ec5, type: 2}
+  _currentHealthSO: {fileID: 0}
+  _scoreData: {fileID: 11400000, guid: 54624b2f74b6cf248ae669b71e5e1bfd, type: 2}
   OnDie:
     m_PersistentCalls:
       m_Calls:

@@ -13,6 +13,9 @@ public class EntityMovementSO : ScriptableObject
     [Header("Rotational Movement")]
     [SerializeField] private float _xTorque;
     [SerializeField] private float _yTorque;
+    [Header("Misc")]
+    [Tooltip("Damage dealt on collision")]
+    [SerializeField] private float _collisionDamage;
 
     public float Speed => _speed;
     public float SpeedMultiplier => _speedMultiplier;
@@ -21,6 +24,7 @@ public class EntityMovementSO : ScriptableObject
     public float BrakeMultiplier => _brakeMultiplier;
     public float XTorque => _xTorque;
     public float YTorque => _yTorque;
+    public float CollisionDamage => _collisionDamage;
     
     public void SetSpeed(float newValue)
     {

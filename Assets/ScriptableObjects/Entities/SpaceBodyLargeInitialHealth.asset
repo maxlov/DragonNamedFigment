@@ -9,14 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6f9492f3288f74c8475adb5bdc7596, type: 3}
-  m_Name: DragonMovement
+  m_Script: {fileID: 11500000, guid: d653db682cdb34d4b8848e6f58184196, type: 3}
+  m_Name: SpaceBodyLargeInitialHealth
   m_EditorClassIdentifier: 
-  _speed: 1000
-  _speedMultiplier: 6
-  _baseSpeedMultiplier: 6
-  _boostMultiplier: 10
-  _brakeMultiplier: 0.2
-  _xTorque: 800
-  _yTorque: 400
-  _collisionDamage: 300
+  _initialHealth: 200

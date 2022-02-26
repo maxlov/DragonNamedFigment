@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7014448459752197784}
   - component: {fileID: 2855021067709221704}
   - component: {fileID: 8392088350254042108}
+  - component: {fileID: 195294582022024656}
   m_Layer: 0
   m_Name: TallPrism
   m_TagString: Untagged
@@ -95,3 +96,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &195294582022024656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936052502896466620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc5a43152975034d918193ab766cf7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthConfigSO: {fileID: 11400000, guid: 65c0ed7dad879ea49997b8de27205c4e, type: 2}
+  _currentHealthSO: {fileID: 0}
+  _scoreData: {fileID: 11400000, guid: 54624b2f74b6cf248ae669b71e5e1bfd, type: 2}
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []

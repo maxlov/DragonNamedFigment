@@ -52,6 +52,7 @@ public class Dragon : MonoBehaviour
         TurnDragon();
     }
 
+    #region Movement Calculations
     private void MoveForwardDragon()
     {
         dragonRigidBody.velocity = _dragonMoveData.Speed * _dragonMoveData.SpeedMultiplier * Time.deltaTime * transform.forward;
@@ -76,6 +77,7 @@ public class Dragon : MonoBehaviour
     {
         rotateVector = lookVector;
     }
+    #endregion
 
     #region Speed Modifiers
 
@@ -100,4 +102,11 @@ public class Dragon : MonoBehaviour
     }
 
     #endregion
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(gameObject.name + " dealt " + _dragonMoveData.CollisionDamage + " to " + collision.gameObject.name);
+        if (collision.gameObject.TryGetComponent<Damageable>(out Damageable damagable))
+            damagable.ReceiveAnAttack(_dragonMoveData.CollisionDamage);
+    }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName ="InputReader", menuName ="Game/Input Reader")]
+[CreateAssetMenu(fileName ="InputReader", menuName ="Gameplay/Input Reader")]
 public class InputReader : DescriptionBaseSO, GameInput.IGameplayActions
 {
     // Assign delegate{} to events to skip null checks.

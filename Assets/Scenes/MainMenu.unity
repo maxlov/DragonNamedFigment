@@ -1687,6 +1687,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 1270ce799f4b1934287142bbc50acd90, type: 2}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneDatabaseSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 274035624197421713, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
       propertyPath: m_text
       value: Exit
@@ -2555,6 +2583,34 @@ PrefabInstance:
     - target: {fileID: 274035623521354396, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 1270ce799f4b1934287142bbc50acd90, type: 2}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneDatabaseSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 274035623521354397, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 274035624197421713, guid: e747f05b161ed9d42a3c87d6369b7091, type: 3}
       propertyPath: m_fontSize

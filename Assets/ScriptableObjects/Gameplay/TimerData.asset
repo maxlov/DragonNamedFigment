@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6776102fcd286714785ecfa32dd92e31, type: 3}
   m_Name: TimerData
   m_EditorClassIdentifier: 
-  _initialTime: 10
-  _currentTime: 0
+  _initialTime: 20
+  _currentTime: 41.963097
   outOfTime:
     m_PersistentCalls:
       m_Calls: []

@@ -11,7 +11,6 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(timerData.CurrentTime);
         timerData.AddTime(-Time.deltaTime);
     }
 }

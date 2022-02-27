@@ -25,6 +25,7 @@ public class WeaponInterface : MonoBehaviour
     {
         if (!isShooting)
             return;
+        
         //if (weaponData.weaponFireMode == WeaponSO.WeaponFireMode.AUTO && timeSinceLastFire < weaponData.fireRate)
         //    return;
 

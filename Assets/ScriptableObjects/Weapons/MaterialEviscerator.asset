@@ -17,6 +17,6 @@ MonoBehaviour:
   projectileVelocity: 600
   weaponScreenShake: 1
   numProjectilesToFire: 1
-  damage: 1
+  damage: 2
   lifeTime: 4
   fireRate: 0.2

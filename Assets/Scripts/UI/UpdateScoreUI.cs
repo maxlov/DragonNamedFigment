@@ -63,6 +63,8 @@ public class UpdateScoreUI : MonoBehaviour
         else
         {
             _lerp = 0;
+            // Workaround, fix lerp score to not add score several times / actually reach score faster
+            scoreUI.text = ((int)scoreData.Score).ToString();
         }
     }
 }

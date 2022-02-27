@@ -11,6 +11,8 @@ public class WeaponInterface : MonoBehaviour
     [SerializeField] private Transform projectileSpawnPoint;
 
     public UnityEvent OnShootEvent = new UnityEvent();
+    public UnityEvent OnShootCancelledEvent = new UnityEvent();
+    public UnityEvent OnShootStartEvent = new UnityEvent();
 
     private bool isShooting = false;
     //private float timeSinceLastFire = 0f;
@@ -45,9 +47,17 @@ public class WeaponInterface : MonoBehaviour
         Destroy(bullet, weaponData.lifeTime);
     }
 
-    public void OnFire() { isShooting = true; }
+    public void OnFire() 
+    { 
+        isShooting = true;
+        OnShootStartEvent.Invoke();
+    }
 
-    public void OnFireCancelled() { isShooting = false; }
+    public void OnFireCancelled() 
+    { 
+        isShooting = false;
+        OnShootCancelledEvent.Invoke();
+    }
 
     public void OnShoot() { OnShootEvent.Invoke(); }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 // This code does too many things for a single script
 public class DragonGameOver : MonoBehaviour
@@ -7,6 +8,8 @@ public class DragonGameOver : MonoBehaviour
     [SerializeField] private TimerSO timerData;
     [SerializeField] private ScoreSO scoreData;
     [SerializeField] private SceneDatabaseSO sceneDB;
+
+    public UnityEvent gameOver = new UnityEvent();
 
     private void OnEnable()
     {
@@ -27,20 +30,21 @@ public class DragonGameOver : MonoBehaviour
 
     private void OnGameOver()
     {
+        gameOver.Invoke();
+
         if (gameObject.TryGetComponent<Dragon>(out Dragon dragonMovement))
             dragonMovement.enabled = false;
         if (gameObject.TryGetComponent<WeaponInterface>(out WeaponInterface weaponInterface))
             weaponInterface.enabled = false;
 
-        StartCoroutine(WaitCoroutine());
-
-        scoreData.UpdateHighScore();
-        sceneDB.LoadGameOver();
+        StartCoroutine(WaitCoroutine());        
     }
 
     // This is useful, separate into different script
     IEnumerator WaitCoroutine()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
+        scoreData.UpdateHighScore();
+        sceneDB.LoadGameOver();
     }
 }

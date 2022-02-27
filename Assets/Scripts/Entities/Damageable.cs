@@ -36,7 +36,9 @@ public class Damageable : MonoBehaviour
 			if (_scoreData != null)
 				_scoreData.AddScore(_healthConfigSO.InitialHealth);
 			_currentHealthSO.SetCurrentHealth(_healthConfigSO.InitialHealth);
-			Destroy(gameObject, .1f);
+			GetComponent<Collider>().enabled = false;
+			GetComponent<MeshRenderer>().enabled = false;
+			Destroy(gameObject, 2f);
 		}
 	}
 }

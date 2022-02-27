@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        if (timerData.CurrentTime == 0)
+            return;
         timerData.AddTime(-Time.deltaTime);
     }
 }

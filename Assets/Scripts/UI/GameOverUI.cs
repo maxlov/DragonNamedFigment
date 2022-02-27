@@ -23,8 +23,8 @@ public class GameOverUI : MonoBehaviour
         {
             gameOverCanvas.SetActive(true);
             victoryCanvas.SetActive(false);
-            scoreUI.text = ((int)scoreData.Score).ToString();
-            highScoreUI.text = ((int)scoreData.HighScore).ToString();
+            scoreUI.text = "Score: " + ((int)scoreData.Score).ToString();
+            highScoreUI.text = "High Score: " + ((int)scoreData.HighScore).ToString();
         }
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TimerData
   m_EditorClassIdentifier: 
   _initialTime: 20
-  _currentTime: 41.963097
+  _currentTime: 0
   outOfTime:
     m_PersistentCalls:
       m_Calls: []

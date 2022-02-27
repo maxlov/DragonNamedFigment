@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-[ExecuteInEditMode]
 public class ImageFillGradient : MonoBehaviour
 {
+    [SerializeField] private TimerSO timerData;
 
     [SerializeField] private Gradient _gradient = null;
     [SerializeField] private Image _image = null;
@@ -16,7 +16,7 @@ public class ImageFillGradient : MonoBehaviour
 
     private void Update()
     {
+        _image.fillAmount = timerData.PercentTimeLeft();
         _image.color = _gradient.Evaluate(_image.fillAmount);
     }
-
 }
